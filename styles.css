@@ -603,6 +603,19 @@ h2 {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 1.1rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .kicker,
+  .hero h1,
+  .deck,
+  .lede,
+  .years {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
   }
 
   .hero-text {
@@ -641,22 +654,27 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - (var(--pad) * 2));
     min-height: 48px;
-    margin: 1.15rem 0 0.4rem;
+    margin: 1.15rem var(--pad) 0.4rem;
   }
 
   .portrait-frame {
     order: 7;
     justify-self: stretch;
     width: 100%;
+    max-width: none;
     margin: 1.25rem 0 0;
+    padding: 0;
   }
 
   .portrait-frame img,
   .portrait-frame video {
     width: 100%;
+    max-width: none;
     height: auto;
+    max-height: none;
+    aspect-ratio: 2 / 3;
     object-fit: contain;
   }
 
