@@ -282,7 +282,6 @@ h1 span:last-child {
   position: relative;
   z-index: 2;
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.45);
-  border-top: 3px solid var(--red-500);
 }
 
 .portrait-frame img,
