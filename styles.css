@@ -282,10 +282,13 @@ h1 span:last-child {
   border-top: 3px solid var(--red-500);
 }
 
-.portrait-frame img {
+.portrait-frame img,
+.portrait-frame video {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  background: #14110d;
 }
 
 .paper {
@@ -646,7 +649,8 @@ h2 {
     margin: 1.25rem 0 0;
   }
 
-  .portrait-frame img {
+  .portrait-frame img,
+  .portrait-frame video {
     width: 100%;
     height: min(72vw, 420px);
     object-fit: cover;

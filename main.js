@@ -17,3 +17,15 @@ if (!reduceMotion && "IntersectionObserver" in window) {
 
   nodes.forEach((node) => observer.observe(node));
 }
+
+const clip = document.querySelector(".portrait-frame video");
+if (clip) {
+  clip.muted = true;
+  clip.defaultMuted = true;
+  if (reduceMotion) {
+    clip.removeAttribute("autoplay");
+    clip.pause();
+  } else {
+    clip.play().catch(() => {});
+  }
+}
