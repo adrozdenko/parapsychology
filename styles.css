@@ -155,11 +155,12 @@ nav a:hover,
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.78fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.78fr);
   column-gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: end;
-  padding: 1.5rem var(--pad) 0;
+  align-items: center;
+  padding: 1.5rem var(--pad) 2.5rem;
   position: relative;
+  overflow: hidden;
   border-top: 3px solid var(--red-500);
 }
 
@@ -174,7 +175,7 @@ nav a:hover,
 .hero-text {
   min-width: 0;
   max-width: 40rem;
-  padding-bottom: clamp(2.2rem, 6vh, 4.2rem);
+  padding-bottom: clamp(1.5rem, 4vh, 3rem);
   position: relative;
 }
 
@@ -272,8 +273,10 @@ h1 span:last-child {
 
 .portrait-frame {
   justify-self: end;
+  min-width: 0;
   width: min(100%, 420px);
-  margin: 0 0 -4.75rem;
+  max-width: 100%;
+  margin: 0;
   padding: 0.7rem;
   background: var(--ink-800);
   position: relative;
@@ -286,6 +289,7 @@ h1 span:last-child {
 .portrait-frame video {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   background: #14110d;
@@ -307,7 +311,7 @@ h1 span:last-child {
 
 .paper-copy {
   max-width: 52rem;
-  padding-top: 8.5rem;
+  padding-top: 4.5rem;
   padding-bottom: 4.5rem;
 }
 
@@ -652,9 +656,8 @@ h2 {
   .portrait-frame img,
   .portrait-frame video {
     width: 100%;
-    height: min(72vw, 420px);
-    object-fit: cover;
-    object-position: center 15%;
+    height: auto;
+    object-fit: contain;
   }
 
   .paper-copy {
