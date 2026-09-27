@@ -190,13 +190,6 @@ nav a:hover,
   color: var(--red-500);
 }
 
-.kicker::before {
-  content: "";
-  width: 2.1rem;
-  height: 2px;
-  background: var(--red-500);
-}
-
 .star {
   display: none;
 }
@@ -409,10 +402,22 @@ h2 {
 }
 
 .contact {
-  padding-top: 3.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 2.4rem;
   background: var(--ink-950);
   border-top: 3px solid var(--red-500);
+}
+
+.contact > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.75rem;
+}
+
+.contact h2,
+.contact .quiet {
+  margin: 0;
 }
 
 .phone {
@@ -604,10 +609,6 @@ h2 {
     font-size: 0.68rem;
   }
 
-  .kicker::before {
-    width: 1.1rem;
-  }
-
   h1 {
     order: 2;
     font-size: clamp(2.35rem, 11.5vw, 3.5rem);
@@ -672,9 +673,38 @@ h2 {
     margin-left: 1.05rem;
   }
 
-  .phone {
-    font-size: clamp(1.45rem, 7.4vw, 2.15rem);
+  .contact {
+    padding-top: 1.5rem;
+    padding-bottom: 1.6rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .contact > div {
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: 0.35rem 0.45rem;
+  }
+
+  .contact h2 {
+    font-size: clamp(1.05rem, 4.4vw, 1.35rem);
+    flex: none;
+  }
+
+  .contact .phone {
+    font-size: clamp(1.05rem, 4.8vw, 1.4rem);
     letter-spacing: 0;
+    white-space: nowrap;
+    flex: none;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .contact .quiet {
+    font-size: clamp(0.55rem, 2.35vw, 0.7rem);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
 
   .sheet {
