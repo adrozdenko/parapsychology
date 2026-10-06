@@ -450,6 +450,15 @@ h2 {
   color: var(--steel-400);
 }
 
+.paper-copy .quiet {
+  margin-top: 1.6rem;
+  font-family: var(--text);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted-on-clean);
+}
+
 .about {
   background: var(--bone-50);
   color: var(--text-on-clean);
